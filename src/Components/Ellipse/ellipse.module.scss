@@ -1,0 +1,22 @@
+@import '../../theme.scss';
+
+.ellipse {
+  width: fit-content;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  padding: 3px 8px 1px;
+  border: 1px solid $grey;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+
+.rotate {
+  svg {
+    transform: rotate(45deg);
+    margin-top: 4px;
+  }
+}
+
+.dark {
+  border: 1px solid $dark !important;
+}

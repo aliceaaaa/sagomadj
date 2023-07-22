@@ -1,0 +1,88 @@
+@import '../../theme.scss';
+
+@mixin grow {
+  transition: width 0.7s ease-in-out;
+  transition: height 0.7s ease-in-out;
+}
+
+.works {
+  padding: 40px 32px;
+  overflow: hidden;
+  margin-bottom: 135px;
+}
+
+.arrows {
+  svg {
+    @include grow();
+
+    &:last-child {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      width: 28px;
+      height: 28px;
+      @include grow();
+    }
+  }
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  gap: 4px;
+  padding-bottom: 4px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  cursor: url('../../pics/cursor-big.png') 24 24, pointer;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 4px;
+    border: none;
+  }
+}
+
+.card {
+  width: 24.7%;
+  height: 360px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  .caption {
+    background-color: $white;
+  }
+}
+
+.image {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 66%;
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.caption {
+  display: flex;
+  background-color: $grey;
+  height: 34%;
+  width: 100%;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-size: 30px;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}

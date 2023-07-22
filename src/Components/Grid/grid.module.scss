@@ -1,0 +1,12 @@
+@import '../../theme.scss';
+ 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  color: $grey;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 77px;
+}

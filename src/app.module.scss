@@ -1,0 +1,17 @@
+@import './theme.scss';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  font-family: Power Grotesk Light;
+  letter-spacing: 0.05em;
+  cursor: url('./pics/cursor.png') 12 12, default;
+
+  a {
+    cursor: url('./pics/cursor.png') 12 12, default;
+  }
+
+  button {
+    cursor: url('./pics/cursor-big.png') 24 24, pointer;
+  }
+}

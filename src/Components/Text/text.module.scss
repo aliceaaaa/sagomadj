@@ -1,0 +1,49 @@
+@import '../../theme.scss';
+
+.wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  width: 100%;
+  height: 115px;
+  border-radius: 16px;
+  background-color: $dark-grey !important;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+
+  &:disabled {
+    cursor: url('../../pics/cursor.png') 12 12, default;
+
+    .title {
+      color: pink;
+    }
+  }
+}
+
+#text:disabled~#title {
+  color: pink;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.active {
+  color: $white;
+  border: 1px solid $white;
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}

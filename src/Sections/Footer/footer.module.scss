@@ -1,0 +1,9 @@
+@import '../../theme.scss';
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 25px 40px;
+  text-transform: uppercase;
+  color: $grey;
+}

@@ -1,0 +1,26 @@
+@import '../../theme.scss';
+
+.support {
+  margin: 0 20px;
+  padding: 40px 0 74px 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  color: $grey;
+  margin-bottom: 32px;
+}
+
+.caption {
+  font-size: 98px;
+  line-height: 90px;
+  color: $white;
+  padding: 20px;
+  margin-bottom: 42px;
+}
+
+.footer {
+  width: 30%;
+}

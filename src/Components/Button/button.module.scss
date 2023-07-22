@@ -1,0 +1,16 @@
+@import '../../theme.scss';
+
+.button {
+  position: relative;
+  height: 64px;
+  width: 196px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  background-color: $green;
+  border: none;
+  z-index: $z-index-9;
+
+  &:hover {
+    background-color: $green;
+  }
+}
