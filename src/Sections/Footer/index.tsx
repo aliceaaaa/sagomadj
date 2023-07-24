@@ -10,8 +10,8 @@ export const Footer = () => (
       <ArrowLink text="ora@sagomadj.com" href="" isEmail />
     </Flex>
     <Flex align="center" justify="end" gap={40}>
-      {outerLinks.map((link) => (
-        <ArrowLink text={link} key={link} href="" />
+      {outerLinks.map(({ text, href }) => (
+        <ArrowLink text={text} key={text} href={href} />
       ))}
       <Ellipse>2022</Ellipse>
     </Flex>

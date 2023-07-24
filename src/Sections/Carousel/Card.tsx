@@ -3,7 +3,7 @@ import { Flex } from "../../Components";
 import styles from "./carousel.module.scss";
 
 export const Card = ({ url, caption }: { url?: string; caption?: string }) => (
-  <Flex direction="column" className={styles.card}>
+  <Flex direction="column" className={styles.card} gap={0}>
     <div
       className={styles.image}
       style={{

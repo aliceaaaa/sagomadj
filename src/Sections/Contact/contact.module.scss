@@ -2,14 +2,13 @@
 
 .contact {
   background-color: $grey;
-  border-radius: 16px;
+  border-radius: $border-radius-common;
   margin: 10px 20px 40px 20px;
   padding: 20px;
 }
 
 .caption {
-  font-size: 98px;
-  line-height: 90px;
+  @include captionText;
   color: $white;
   color: $dark;
 }

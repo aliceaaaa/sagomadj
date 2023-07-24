@@ -10,25 +10,21 @@
   display: flex;
   width: 100%;
   height: 115px;
-  border-radius: 16px;
-  background-color: $dark-grey !important;
+  border-radius: $border-radius-common;
+  background-color: $dark-grey;
   border: none;
   box-shadow: none;
   outline: none;
   padding: 20px;
-  font-size: 20px;
+  font-size: $text-size;
 
   &:disabled {
-    cursor: url('../../pics/cursor.png') 12 12, default;
+    @include cursorSmall;
 
     .title {
       color: pink;
     }
   }
-}
-
-#text:disabled~#title {
-  color: pink;
 }
 
 .title {
@@ -44,6 +40,6 @@
 
 .loader {
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 20%;
+  left: 20%;
 }

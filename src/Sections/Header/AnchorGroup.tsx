@@ -1,9 +1,9 @@
 import { SyntheticEvent, useState } from "react";
-import classNames from "classnames";
+import cn from "classnames";
 
-import { outerLinks } from "../../constants";
+import { WHITE_COLOR, outerLinks } from "../../constants";
 import { Plus } from "../../svg";
-import { ArrowLink } from "../../Components";
+import { ArrowLink, Flex } from "../../Components";
 
 import styles from "./style.module.scss";
 
@@ -17,19 +17,21 @@ function AnchorGroup(): JSX.Element {
   };
 
   return (
-    <div className={styles.anchorGroup}>
+    <Flex gap={40} className={styles.anchorGroup}>
       {visible &&
-        outerLinks.map((link) => <ArrowLink text={link} key={link} href="" />)}
+        outerLinks.map(({ text, href }) => (
+          <ArrowLink text={text} key={text} href={href} />
+        ))}
       <a
         href="ds"
         onClick={showLinks}
-        style={{ color: visible || isHovered ? "#FFFFFF" : "#8E8E8E" }}
+        style={visible || isHovered ? { color: WHITE_COLOR } : {}}
         onMouseOver={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         Links
         <Plus
-          className={classNames({
+          className={cn({
             [styles.whiteIcon]: isHovered,
             [styles.transformedIcon]: visible,
           })}
@@ -37,7 +39,7 @@ function AnchorGroup(): JSX.Element {
       </a>
       <a href="as">Works</a>
       <a href="as">Shop</a>
-    </div>
+    </Flex>
   );
 }
 

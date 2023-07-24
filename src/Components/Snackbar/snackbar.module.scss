@@ -22,7 +22,7 @@
   background: $dark;
   color: $white;
   z-index: 10000;
-  border-radius: 8px;
+  border-radius: $border-radius-common;
   padding: 8px;
   animation: 700ms ease-out forwards slide-up;
   overflow: hidden;

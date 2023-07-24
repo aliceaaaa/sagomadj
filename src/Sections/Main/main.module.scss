@@ -2,11 +2,10 @@
 
 .main {
   position: relative;
-  font-size: 98px;
-  line-height: 90px;
   margin: 0 1.4%;
   padding: 5% 0;
   border-bottom: 1px solid $grey;
+  @include captionText;
 
   &__grey {
     position: relative;

@@ -1,6 +1,7 @@
 import { SyntheticEvent, useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import * as CONST from "../../constants";
 import { Flex, SnackbarContext, Text } from "../../Components";
 import { CircleDot } from "../../svg";
 
@@ -20,16 +21,16 @@ export const Contanct = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        CONST.emailServiceID,
+        CONST.emailTemplateID,
         form.current!,
-        "YOUR_PUBLIC_KEY"
+        CONST.publicKey
       )
       .then(() => {
-        snackbarCtx?.displayMsg("Your message was successfully sent");
+        snackbarCtx?.displayMsg(CONST.messageSuccessStr);
       })
       .catch(() => {
-        snackbarCtx?.displayMsg("Something went wrong. Please, try again");
+        snackbarCtx?.displayMsg(CONST.messageFailStr);
       })
       .finally(() => setLoading(false));
   };

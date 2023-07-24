@@ -8,7 +8,7 @@
 .works {
   padding: 40px 32px;
   overflow: hidden;
-  margin-bottom: 135px;
+  margin-bottom: 10%;
 }
 
 .arrows {
@@ -20,8 +20,8 @@
     }
 
     &:hover {
-      width: 28px;
-      height: 28px;
+      width: 110%;
+      height: 110%;
       @include grow();
     }
   }
@@ -30,32 +30,17 @@
 .carousel {
   display: flex;
   width: 100%;
-  gap: 4px;
-  padding-bottom: 4px;
+  gap: 0.4%;
+  padding-bottom: 0.4%;
   overflow-x: scroll;
-  scrollbar-width: thin;
-  cursor: url('../../pics/cursor-big.png') 24 24, pointer;
-
-  &::-webkit-scrollbar {
-    height: 4px;
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $grey;
-    border-radius: 4px;
-    border: none;
-  }
+  @include cursorBig;
+  @include styledScroll;
 }
 
 .card {
-  width: 24.7%;
-  height: 360px;
-  border-radius: 16px;
+  width: 30vw;
+  height: 25vw;
+  border-radius: $border-radius-common;
   flex-shrink: 0;
 }
 
@@ -68,11 +53,11 @@
 .image {
   display: flex;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 66%;
   width: 100%;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: $border-radius-common;
+  border-top-right-radius: $border-radius-common;
 }
 
 .caption {
@@ -80,9 +65,9 @@
   background-color: $grey;
   height: 34%;
   width: 100%;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  font-size: 30px;
+  border-bottom-left-radius: $border-radius-common;
+  border-bottom-right-radius: $border-radius-common;
+  font-size: $text-size-medium;
   padding: 12px 24px;
   box-sizing: border-box;
 }
