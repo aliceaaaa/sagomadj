@@ -6,9 +6,8 @@
   left: 0;
   box-sizing: border-box;
   height: 90px;
-  margin: 0 1.4%;
-  border-bottom: 1px solid $grey;
   z-index: 99;
+  border-bottom: 1px solid $grey;
 }
 
 .bg {
@@ -75,4 +74,10 @@
   path {
     fill: $white
   }
+}
+
+.menu {
+  z-index: 100;
+  margin-right: 40px;
+  cursor: pointer;
 }

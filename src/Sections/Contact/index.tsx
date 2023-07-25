@@ -2,7 +2,7 @@ import { SyntheticEvent, useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import * as CONST from "../../constants";
-import { Flex, SnackbarContext, Text } from "../../Components";
+import { Button, Flex, SnackbarContext, Text } from "../../Components";
 import { CircleDot } from "../../svg";
 
 import styles from "./contact.module.scss";
@@ -13,6 +13,7 @@ export const Contanct = () => {
   const snackbarCtx = useContext(SnackbarContext);
 
   const [loading, setLoading] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const sendEmail = (e: SyntheticEvent) => {
     setLoading(true);
@@ -28,11 +29,18 @@ export const Contanct = () => {
       )
       .then(() => {
         snackbarCtx?.displayMsg(CONST.messageSuccessStr);
+        form.current?.reset();
       })
       .catch(() => {
         snackbarCtx?.displayMsg(CONST.messageFailStr);
       })
       .finally(() => setLoading(false));
+  };
+
+  const checkValid = () => {
+    setTimeout(() => {
+      setIsFormValid(!!form.current?.checkValidity());
+    }, 500);
   };
 
   return (
@@ -59,6 +67,7 @@ export const Contanct = () => {
           type="text"
           required
           loading={loading}
+          onKeyDown={checkValid}
         />
         <Text
           title="email"
@@ -66,9 +75,18 @@ export const Contanct = () => {
           type="email"
           required
           loading={loading}
+          onKeyDown={checkValid}
         />
-        <Text title="comments" name="comments" required loading={loading} />
-        <input type="submit" hidden disabled={loading} />
+        <Text
+          title="comments"
+          name="comments"
+          required
+          loading={loading}
+          onKeyDown={checkValid}
+        />
+        {isFormValid && (
+          <Button type="submit" disabled={loading} caption="send" />
+        )}
       </form>
     </Flex>
   );

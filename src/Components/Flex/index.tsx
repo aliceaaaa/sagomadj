@@ -2,7 +2,7 @@ import cn from "classnames";
 
 import styles from "./flex.module.scss";
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+export interface FlexProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: "start" | "end" | "center";
   direction?: "row" | "column";
   justify?: "start" | "end" | "center" | "between" | "around";
@@ -10,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   fullWidth?: boolean;
 }
 
-export const Flex: React.FC<Props> = ({
+export const Flex: React.FC<FlexProps> = ({
   className,
   align = "start",
   justify = "start",

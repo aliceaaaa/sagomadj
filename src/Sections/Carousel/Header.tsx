@@ -4,7 +4,7 @@ import { ScrollDirectionType } from "./types";
 
 import styles from "./carousel.module.scss";
 
-const Section = ({ children }: { children: React.ReactNode }) => (
+const Col = ({ children }: { children: React.ReactNode }) => (
   <Flex direction="column" gap={24}>
     {children}
   </Flex>
@@ -16,7 +16,7 @@ interface HeaderProps {
 
 export const Header = ({ scrollToNext }: HeaderProps) => (
   <Grid>
-    <Section>
+    <Col>
       <Ellipse>SELECTED WORKS</Ellipse>
       <Flex direction="column" style={{ alignSelf: "center" }}>
         <Flex gap={4} align="center">
@@ -28,8 +28,8 @@ export const Header = ({ scrollToNext }: HeaderProps) => (
           product
         </Flex>
       </Flex>
-    </Section>
-    <Section>
+    </Col>
+    <Col>
       <Flex direction="column" gap={24} style={{ alignSelf: "flex-end" }}>
         <Ellipse rotate>
           2019 <Arrow /> <WhiteText>Now</WhiteText>
@@ -43,14 +43,14 @@ export const Header = ({ scrollToNext }: HeaderProps) => (
           <br />
         </div>
       </Flex>
-    </Section>
-    <Section>
+    </Col>
+    <Col>
       <Flex direction="column" gap={24} style={{ alignSelf: "flex-end" }}>
         <Flex gap={10} className={styles.arrows}>
           <ArrowHorizontal onClick={() => scrollToNext("backward")} />
           <ArrowHorizontal onClick={() => scrollToNext("forward")} />
         </Flex>
       </Flex>
-    </Section>
+    </Col>
   </Grid>
 );

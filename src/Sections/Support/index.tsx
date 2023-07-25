@@ -1,9 +1,9 @@
-import { ArrowLink, Button, Ellipse, Flex } from "../../Components";
+import { ArrowLink, Button, Ellipse, Flex, Section } from "../../Components";
 
 import styles from "./support.module.scss";
 
 export const Support = () => (
-  <Flex direction="column" className={styles.support}>
+  <Section direction="column" bordered>
     <div className={styles.header}>
       <Ellipse>support Ukraine</Ellipse>
       <Ellipse>important now</Ellipse>
@@ -17,5 +17,5 @@ export const Support = () => (
       <Button caption="Support" />
       <ArrowLink href="http://google.com" text="what’s happening?" />
     </Flex>
-  </Flex>
+  </Section>
 );

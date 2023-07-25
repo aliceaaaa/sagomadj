@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import { Flex } from "../../Components";
+import { Section } from "../../Components";
 import { Header } from "./Header";
 import { Card } from "./Card";
 import { ScrollDirectionType } from "./types";
@@ -23,7 +23,7 @@ export const Carousel = () => {
   };
 
   return (
-    <Flex direction="column" className={styles.works}>
+    <Section direction="column" className={styles.works} bordered>
       <Header scrollToNext={scrollToNext} />
       <div className={styles.carousel} ref={carouselRef}>
         <Card url="../pics/joke/1" />
@@ -34,6 +34,6 @@ export const Carousel = () => {
         <Card />
         <Card />
       </div>
-    </Flex>
+    </Section>
   );
 };

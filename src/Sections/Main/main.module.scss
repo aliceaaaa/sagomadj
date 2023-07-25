@@ -2,9 +2,6 @@
 
 .main {
   position: relative;
-  margin: 0 1.4%;
-  padding: 5% 0;
-  border-bottom: 1px solid $grey;
   @include captionText;
 
   &__grey {

@@ -1,10 +1,10 @@
 import { CircleDot, Flower, Planet } from "../../svg";
-import { Ellipse, Flex, Grid, WhiteText } from "../../Components";
+import { Ellipse, Flex, Grid, Section, WhiteText } from "../../Components";
 
 import styles from "./store.module.scss";
 
 export const Store = () => (
-  <Flex direction="column" className={styles.store}>
+  <Section direction="column" bordered>
     <Grid>
       <Flex direction="column">
         <Ellipse>shop</Ellipse>
@@ -41,5 +41,5 @@ export const Store = () => (
         <br /> store
       </div>
     </div>
-  </Flex>
+  </Section>
 );

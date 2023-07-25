@@ -13,3 +13,5 @@ export const messageSuccessStr = "Your message was successfully sent";
 export const messageFailStr = "Something went wrong. Please, try again";
 
 export const WHITE_COLOR = "#FFF";
+export const GREEN_COLOR = "#1BF817";
+export const GREY_COLOR = "#8E8E8E";

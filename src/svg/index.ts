@@ -6,6 +6,7 @@ import { ReactComponent as CircleDot } from "./circle-dot.svg";
 import { ReactComponent as Cross } from "./cross.svg";
 import { ReactComponent as Flower } from "./flower.svg";
 import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Menu } from "./menu.svg";
 import { ReactComponent as Planet } from "./planet.svg";
 import { ReactComponent as Plus } from "./plus.svg";
 import { ReactComponent as Stamp } from "./stamp.svg";
@@ -19,6 +20,7 @@ export {
   Cross,
   Flower,
   Logo,
+  Menu,
   Planet,
   Plus,
   Stamp,
